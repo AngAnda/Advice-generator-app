@@ -1,0 +1,21 @@
+@use "./variables" as v;
+
+body{
+    background-color: v.$Dark-Blue;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 357px 13px;
+    position: relative;
+}
+
+.attribution{
+    color: v.$Light-Cyan;
+    position: absolute;
+    bottom: 3rem;
+    & a{
+        color:v.$Neon-Green;
+    }
+}

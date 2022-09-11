@@ -1,0 +1,28 @@
+@use "./variables" as v;
+
+// is margin buttom fine?
+
+
+main{
+    position: relative;
+    background-color: v.$Dark-Grayish-Blue;
+    max-width: 542px;
+    //height:250px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: v.$padding-vertical-card v.$padding-horizontal-card;
+    & *{
+        margin-bottom: 35px;
+    }
+    border-radius: 1rem;
+}
+
+.divider{
+    width: 100%;
+    height: 35px;
+    background-color:white;
+    background: url("../images/pattern-divider-desktop.svg") no-repeat;
+    background-position: top;
+    margin-bottom: 0;
+}
