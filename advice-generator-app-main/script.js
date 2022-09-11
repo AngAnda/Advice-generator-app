@@ -2,15 +2,19 @@
 const btn = document.querySelector('button')
 const content = document.querySelector('q')
 const number = document.querySelector('.number')
+const min = 0
+const max = 224
+
+
+function randomInt(){
+    return Math.floor( Math.random() * max) + 0
+}
 
 async function getAdvice(){
 
-    // 0 to 22 
+    // 0 to 224 
 
-    let stop;
-    
-    do {
-    const requestURL = "https://api.adviceslip.com/advice"
+    const requestURL = "https://api.adviceslip.com/advice/" + randomInt()
     
     const request = new Request(requestURL)
 
@@ -20,8 +24,7 @@ async function getAdvice(){
 
     //while(showAdvice(obj) === false);
     
-    stop = showAdvice(obj)
-    } while (stop === false);
+    showAdvice(obj)
    // console.log(showAdvice(obj));
 }
 
